@@ -28,12 +28,15 @@ function productOpen() {
 
   if (products.length > 0) {
     products.forEach(function (product) {
-      product.addEventListener("click", function (event) {        
+      product.addEventListener("click", function (event) { 
+        var thisOpened = this.classList.contains('productCase_open');       
         this.parentElement.querySelectorAll('.productCase_open').forEach(function (elem) {
           elem.classList.remove('productCase_open')
         });
 
-        this.classList.toggle('productCase_open');
+        if (!thisOpened) {
+          this.classList.add("productCase_open")
+      }
       });
     });
   }

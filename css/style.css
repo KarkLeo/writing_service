@@ -171,7 +171,7 @@ body {
   .productMenu__list {
     display: block; }
   .productMenu__item {
-    width: 100%; }
+    width: initial; }
   .productCase__name {
     font-size: 1em;
     margin: 0.6em 0; }
@@ -188,6 +188,8 @@ body {
     transition: transform 200ms ease-in-out; }
   .productCase__list {
     display: none; }
+  .productCase_open {
+    font-size: 1em; }
   .productCase_open .productCase__name::after {
     transform: rotate(-135deg); }
   .productCase_open .productCase__list {

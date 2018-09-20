@@ -50,7 +50,7 @@
     display: block;
   }
   .productMenu__item {
-    width: 100%;
+    width: initial;
   }
   .productCase__name {
     font-size: 1em;
@@ -70,6 +70,9 @@
   }
   .productCase__list {
     display: none;
+  }
+  .productCase_open {
+    font-size: 1em;
   }
   .productCase_open .productCase__name::after {
     transform: rotate(-135deg);
