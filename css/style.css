@@ -42,7 +42,8 @@ body {
   display: flex; }
 
 .mainMenu__button {
-  display: none; }
+  display: none;
+  outline: none; }
 
 .mainMenu__list {
   align-self: center;
