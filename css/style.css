@@ -12,6 +12,14 @@ body {
   width: 100%;
   height: 100vh; }
 
+@media screen and (orientation: portrait) {
+  html {
+    font-size: calc(100vw / 320 * 12); }
+  .content {
+    display: block;
+    min-height: 100vh;
+    height: auto; } }
+
 .header {
   font-size: 1rem;
   display: flex;
@@ -32,6 +40,9 @@ body {
 
 .mainMenu {
   display: flex; }
+
+.mainMenu__button {
+  display: none; }
 
 .mainMenu__list {
   align-self: center;
@@ -62,6 +73,57 @@ body {
 .mainMenu__link:hover::after {
   transform: scaleX(1); }
 
+@media screen and (orientation: portrait) {
+  .header {
+    padding: 1em; }
+  .logo {
+    padding: 0;
+    height: 2.1em; }
+  .logo__image {
+    height: 100%; }
+  .mainMenu {
+    display: none; }
+  .mainMenu__button {
+    font-size: 1em;
+    position: relative;
+    z-index: 100;
+    display: block;
+    border: none;
+    background: none;
+    margin: -1em 0;
+    padding: 0; }
+  .mainMenu__button_open > *:nth-child(1) {
+    transform: translateY(0.9em) rotate(45deg); }
+  .mainMenu__button_open > *:nth-child(2) {
+    transform: scaleX(0.1); }
+  .mainMenu__button_open > *:nth-child(3) {
+    transform: translateY(-0.9em) rotate(-45deg); }
+  .mainMenu__buttonPart {
+    display: block;
+    width: 2.4em;
+    height: 0.3em;
+    margin: 0.6em 0;
+    background-color: #fff;
+    transition: transform 100ms ease-in-out; }
+  .mainMenu_open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333; }
+  .mainMenu__list {
+    display: block;
+    text-align: center; }
+  .mainMenu__item {
+    padding: 1.6em; }
+  .mainMenu__link {
+    font-size: 1.6em; } }
+
 .productMenu {
   font-size: 1rem;
   padding: 0.3em 10em; }
@@ -77,15 +139,15 @@ body {
   margin: 0 1em;
   width: 10em; }
 
-.productCase__nameLink {
-  color: #333;
-  text-decoration: none;
-  cursor: default; }
+.productCase {
+  font-size: 1em; }
 
 .productCase__name {
   font-size: 1.2em;
   font-weight: bold;
-  padding: 0; }
+  color: #333;
+  padding: 0;
+  vertical-align: middle; }
 
 .productCase__list {
   padding: 0; }
@@ -102,6 +164,34 @@ body {
 .productCase__link:hover {
   text-decoration: underline; }
 
+@media screen and (orientation: portrait) {
+  .productMenu {
+    padding: 0.2em 1em; }
+  .productMenu__list {
+    display: block; }
+  .productMenu__item {
+    width: 100%; }
+  .productCase__name {
+    font-size: 1em;
+    margin: 0.6em 0; }
+  .productCase__name::after {
+    content: '';
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    margin-left: 0.6em;
+    border-bottom: 0.1em solid #333;
+    border-right: 0.1em solid #333;
+    transform-origin: 0.3em 0.3em;
+    transform: rotate(45deg);
+    transition: transform 200ms ease-in-out; }
+  .productCase__list {
+    display: none; }
+  .productCase_open .productCase__name::after {
+    transform: rotate(-135deg); }
+  .productCase_open .productCase__list {
+    display: block; } }
+
 .promo {
   font-size: 1rem;
   width: 100%;
@@ -111,6 +201,7 @@ body {
   box-sizing: border-box;
   background-image: url("/img/bg.jpg"), url("/writing_service/img/bg.jpg");
   background-size: cover;
+  background-color: #666;
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -119,7 +210,7 @@ body {
   max-width: 40%; }
 
 .promo__title {
-  font-size: 3.8rem;
+  font-size: 3.8em;
   font-weight: bold;
   color: #fff;
   padding: 0;
@@ -174,3 +265,22 @@ body {
 .triggers__value {
   color: #fff;
   margin: 0; }
+
+@media screen and (orientation: portrait) {
+  .promo {
+    padding: 1em; }
+  .contacts,
+  .triggers {
+    display: none; }
+  .promo__header {
+    max-width: 100%;
+    text-align: center; }
+  .promo__title {
+    font-size: 3.4em;
+    margin: 0.3em 0 0.2em; }
+  .promo__description {
+    font-size: 1.2em;
+    margin: 1em 0 1em; }
+  .promo__button {
+    display: inline-block;
+    margin: 0 auto 1em; } }

@@ -8,17 +8,17 @@
   background-image: url('/img/bg.jpg'),
                     url('/writing_service/img/bg.jpg');
   background-size: cover;
+  background-color: #666;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .promo__header {
   max-width: 40%;
 }
 .promo__title {
-  font-size: 3.8rem;
+  font-size: 3.8em;
   font-weight: bold;
   color: #fff;
   padding: 0;
@@ -75,4 +75,31 @@
 .triggers__value {
   color: #fff;
   margin: 0;
+}
+
+
+@media screen and (orientation:portrait) {
+  .promo {
+    padding: 1em;
+  }
+  .contacts,
+  .triggers {
+    display: none;
+  }
+  .promo__header {
+    max-width: 100%;
+    text-align: center;
+  }
+  .promo__title {
+    font-size: 3.4em;
+    margin: 0.3em 0 0.2em;
+  }
+  .promo__description {
+    font-size: 1.2em;
+    margin: 1em 0 1em;
+  }
+  .promo__button {
+    display: inline-block;
+    margin: 0 auto 1em;
+  }
 }
