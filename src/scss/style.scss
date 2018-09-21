@@ -29,7 +29,8 @@ body {
   .content {
     //display: block;
     min-height: 100%;
-    height: auto;
+    height: auto;    
+    padding-top: 3.5em;
   }
 }
 @media screen and (orientation: landscape) and

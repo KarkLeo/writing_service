@@ -1,6 +1,6 @@
 .productMenu {
   font-size: 1rem;
-  padding: 0.3em 10em;
+  padding: .3em 10em;
 }
 .productMenu__list {
   display: flex;
@@ -11,7 +11,7 @@
   list-style: none;
   padding: 0;
   width: 10em;
-  margin: 0 0.6em
+  margin: 0 .6em
 }
 
 .productCase__name {
@@ -19,7 +19,7 @@
   font-weight: bold;
   color: #333;
   padding: 0;
-  margin: 0 0 0.6em;
+  margin: 0 0 .6em;
 }
 .productCase__list {
   padding: 0;
@@ -28,9 +28,9 @@
 .productCase__item {
   list-style: none;
   box-sizing: border-box;
-  padding-left: 0.6em;
-  padding-bottom: 0.3em; 
-  padding-top: 0.3em; 
+  padding-left: .6em;
+  padding-bottom: .3em; 
+  padding-top: .3em; 
 }
 .productCase__link {
   font-size: 1em;
@@ -46,19 +46,23 @@
 @media screen and (orientation: portrait), 
 (max-width: 800px) {
   .productMenu {
-    padding: 0.3em 2.4em;
+    padding: .3em 2.4em .1em;
   }
   .productMenu__list {
     display: block;
   }
   .productMenu__item {
     width: initial;
-    margin: 0 0 1.2em;
-    background-color: rgba(0,0,0, 0.3);
+    margin: 0 0 .8em;
+    border-bottom: .01em solid #ccc;
+  }
+  .productMenu__item:last-child {
+    border-bottom: none;
+    margin: 0;
   }
   .productCase__name {
     font-size: 1.4em;
-    margin: 0.6em 0 0.3em;
+    margin: .6em 0 .3em;
     position: relative;
   }
   .productCase__name::after {
@@ -66,25 +70,26 @@
     z-index: -50;
     position: absolute;
     display: inline-block;
-    width: 0.5em;
-    height: 0.5em;
-    right: 0.1em;
-    top: 0.2em;
-    border-bottom: 0.1em solid #333;
-    border-right: 0.1em solid #333;
-    transform-origin: 0.3em 0.3em;
-    transform: translateY(-0.2em) rotate(45deg);
+    width: .5em;
+    height: .5em;
+    right: .1em;
+    top: .2em;
+    border-bottom: .1em solid #333;
+    border-right: .1em solid #333;
+    transform-origin: .3em .3em;
+    transform: translateY(-.2em) rotate(45deg);
     transition: transform 200ms ease-in-out;
   }
   .productCase__list {
     display: none;
+    margin-bottom: .6em;
   }
   .productCase_open .productCase__name::after {
-    transform: translateY(0.1em) rotate(-135deg);
+    transform: translateY(.1em) rotate(-135deg);
   }
   .productCase_open .productCase__list {
     display: block;
-    padding-left: 0.6em; 
+    padding-left: .6em; 
   }
   .productCase__link {
     font-size: 1.2em;
