@@ -26,18 +26,29 @@ function mainMenuOpen() {
 function productOpen() {
   var products = document.querySelectorAll('.productCase');
   var productsName = document.querySelectorAll('.productCase__name');
+  var promo = document.querySelectorAll('.promo');
 
   if (products.length > 0) {
     productsName.forEach(function (productName) {
       productName.addEventListener("click", function (event) { 
         var thisOpened = this.parentElement.classList.contains('productCase_open');       
         this.parentElement.parentElement.querySelectorAll('.productCase_open').forEach(function (elem) {
-          elem.classList.remove('productCase_open')
+          elem.classList.remove('productCase_open');
         });
-
         if (!thisOpened) {
-          this.parentElement.classList.add("productCase_open")
+          this.parentElement.classList.add("productCase_open");
       }
+      });
+    });
+  }
+  if (promo.length > 0) {
+    promo.forEach(function (promoItem) {
+      promoItem.addEventListener("click", function (event) {
+        products.forEach(function (elem) {
+          if(elem.classList.contains('productCase_open')) {
+            elem.classList.remove('productCase_open');
+          }
+        });
       });
     });
   }

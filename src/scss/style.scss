@@ -29,11 +29,12 @@ body {
     //display: block;
     min-height: 100%;
     height: auto;    
-    padding-top: 3.5em;
+    padding-top: 3.3em;
   }
 }
-@media screen and (orientation: landscape) and
-(max-width: 800px) {
+@media screen and (orientation: landscape) 
+and (max-width: 800px)
+and (min-width: 400px) {
   html,
   body {
     font-size: calc((100vw / 480) * 10);
