@@ -130,8 +130,6 @@ body {
   .mainMenu__list {
     display: block;
     text-align: center; }
-  .mainMenu__item {
-    padding: 1.4em; }
   .mainMenu__link {
     font-size: 1.4em; } }
 
@@ -147,14 +145,15 @@ body {
 .productMenu__item {
   list-style: none;
   padding: 0;
-  margin: 0 1em;
-  width: 10em; }
+  width: 10em;
+  margin: 0 0.6em; }
 
 .productCase__name {
   font-size: 1.2em;
   font-weight: bold;
   color: #333;
-  padding: 0; }
+  padding: 0;
+  margin: 0 0 0.6em; }
 
 .productCase__list {
   padding: 0;
@@ -163,8 +162,9 @@ body {
 .productCase__item {
   list-style: none;
   box-sizing: border-box;
-  padding-left: 0.8em;
-  padding-bottom: 0.2em; }
+  padding-left: 0.6em;
+  padding-bottom: 0.3em;
+  padding-top: 0.3em; }
 
 .productCase__link {
   font-size: 1em;
@@ -176,33 +176,35 @@ body {
 
 @media screen and (orientation: portrait), (max-width: 800px) {
   .productMenu {
-    padding: 0.2em 1em; }
+    padding: 0.3em 2.4em; }
   .productMenu__list {
     display: block; }
   .productMenu__item {
-    width: initial; }
+    width: initial;
+    margin: 0 0 1.2em; }
   .productCase__name {
     font-size: 1.4em;
-    margin: 0.6em 0; }
-  .productCase__name::after {
+    margin: 0.6em 0 0.3em; }
+  .productCase__name::before {
     content: '';
     z-index: -50;
     position: relative;
     display: inline-block;
     width: 0.5em;
     height: 0.5em;
-    margin-left: 0.6em;
+    margin-right: 0.6em;
     border-bottom: 0.1em solid #333;
     border-right: 0.1em solid #333;
     transform-origin: 0.3em 0.3em;
-    transform: rotate(45deg);
+    transform: translateY(-0.2em) rotate(45deg);
     transition: transform 200ms ease-in-out; }
   .productCase__list {
     display: none; }
-  .productCase_open .productCase__name::after {
-    transform: rotate(-135deg); }
+  .productCase_open .productCase__name::before {
+    transform: translateY(0.1em) rotate(-135deg); }
   .productCase_open .productCase__list {
-    display: block; }
+    display: block;
+    padding-left: 1.2em; }
   .productCase__link {
     font-size: 1.2em; } }
 
@@ -221,24 +223,25 @@ body {
   align-items: center; }
 
 .promo__header {
-  max-width: 40%; }
+  max-width: 36em; }
 
 .promo__title {
   font-size: 3.8em;
   font-weight: bold;
   color: #fff;
   padding: 0;
-  margin: 0 0 1em; }
+  margin: 0 0 0.6em; }
 
 .promo__description {
   font-size: 1.2em;
   font-weight: bold;
-  line-height: 1.6em;
+  line-height: 1.4em;
   color: #fff;
   padding: 0;
-  margin: 2em 0 4em; }
+  margin: 0 0 2.4em; }
 
 .promo__button {
+  display: inline-block;
   font-size: 1.2em;
   font-weight: bold;
   color: #fff;
@@ -246,8 +249,7 @@ body {
   text-decoration: none;
   padding: 0.8em;
   border: 0.1em solid #fff;
-  border-radius: 0.4em;
-  margin: 1em 0; }
+  border-radius: 0.4em; }
 
 .contacts,
 .triggers {
@@ -257,14 +259,15 @@ body {
 .triggers__item {
   list-style: none;
   padding: 0;
-  margin: 2em 0; }
+  padding: 1.2em 0; }
 
 .contacts__name,
 .triggers__name {
   font-size: 1.2em;
   font-weight: bold;
   color: #fff;
-  margin: 0.2em 0; }
+  margin: 0;
+  padding-bottom: 0.6em; }
 
 .contacts__value {
   color: #fff;
@@ -282,7 +285,7 @@ body {
 
 @media screen and (orientation: portrait), (max-width: 800px) {
   .promo {
-    padding: 1em; }
+    padding: 1.2em; }
   .contacts,
   .triggers {
     display: none; }
@@ -290,11 +293,4 @@ body {
     max-width: 100%;
     text-align: center; }
   .promo__title {
-    font-size: 3.4em;
-    margin: 0.3em 0 0.2em; }
-  .promo__description {
-    font-size: 1.4em;
-    margin: 1em 0 1em; }
-  .promo__button {
-    display: inline-block;
-    margin: 0 auto 1em; } }
+    font-size: 3.4em; } }
