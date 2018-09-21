@@ -9,6 +9,7 @@
   box-sizing: border-box;
   position: fixed;
   top: 0;
+  z-index: 10;
 }
 
 .logo {
@@ -19,6 +20,7 @@
   text-decoration: none; 
   outline: none;
   position: relative;
+  z-index: 10;
 }
 .logo__image {
   width: auto;
