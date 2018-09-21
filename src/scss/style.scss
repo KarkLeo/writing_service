@@ -18,7 +18,8 @@ body {
   box-sizing: border-box;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait), 
+(max-width: 800px) {
   html,
   body {
     font-size: calc((100vw / 320) * 12);
@@ -29,7 +30,13 @@ body {
     height: auto;
   }
 }
-
+@media screen and (orientation: landscape) and
+(max-width: 800px) {
+  html,
+  body {
+    font-size: calc((100vw / 480) * 10);
+  }
+}
 @import '_header.scss';
 @import '_product_menu.scss';
 @import '_promo.scss';

@@ -77,8 +77,8 @@
   margin: 0;
 }
 
-
-@media screen and (orientation:portrait) {
+@media screen and (orientation: portrait), 
+(max-width: 800px) {
   .promo {
     padding: 1em;
   }
