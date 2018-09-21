@@ -23,8 +23,7 @@ body {
   html,
   body {
     font-size: calc((100vw / 320) * 12);
-    height: 100%;
-        /*!important;*/
+    height: 100%; 
   }
   .content {
     //display: block;
@@ -39,7 +38,6 @@ body {
   body {
     font-size: calc((100vw / 480) * 10);
     height: 100%;
-        /*!important;*/
   }
 }
 @import '_header.scss';
