@@ -54,19 +54,22 @@
   .productMenu__item {
     width: initial;
     margin: 0 0 1.2em;
+    background-color: rgba(0,0,0, 0.3);
   }
   .productCase__name {
     font-size: 1.4em;
     margin: 0.6em 0 0.3em;
+    position: relative;
   }
   .productCase__name::after {
     content: '';
     z-index: -50;
-    position: relative;
+    position: absolute;
     display: inline-block;
     width: 0.5em;
     height: 0.5em;
-    margin-left: 0.6em;
+    right: 0.1em;
+    top: 0.2em;
     border-bottom: 0.1em solid #333;
     border-right: 0.1em solid #333;
     transform-origin: 0.3em 0.3em;
