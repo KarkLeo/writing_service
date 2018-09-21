@@ -7,15 +7,17 @@
   background-color: #333;
   padding: 0 10em;
   box-sizing: border-box;
+  position: fixed;
+  top: 0;
 }
 
 .logo {
   padding: 0.6em 0;
-  height: 3.2em;
+  height: 2.8em;
 }
 .logo__image {
   width: auto;
-  height: 2.4em;
+  height: 100%;
 }
 
 .mainMenu {
@@ -103,7 +105,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     z-index: 50;
     top: 0;
     left: 0;
@@ -116,9 +118,9 @@
     text-align: center;
   }
   .mainMenu__item {
-    padding: 1.6em;
+    padding: 1.4em;
   }
   .mainMenu__link {
-    font-size: 1.6em;
+    font-size: 1.4em;
   }
 }
