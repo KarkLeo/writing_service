@@ -25,17 +25,18 @@ function mainMenuOpen() {
 
 function productOpen() {
   var products = document.querySelectorAll('.productCase');
+  var productsName = document.querySelectorAll('.productCase__name');
 
   if (products.length > 0) {
-    products.forEach(function (product) {
-      product.addEventListener("click", function (event) { 
-        var thisOpened = this.classList.contains('productCase_open');       
-        this.parentElement.querySelectorAll('.productCase_open').forEach(function (elem) {
+    productsName.forEach(function (productName) {
+      productName.addEventListener("click", function (event) { 
+        var thisOpened = this.parentElement.classList.contains('productCase_open');       
+        this.parentElement.parentElement.querySelectorAll('.productCase_open').forEach(function (elem) {
           elem.classList.remove('productCase_open')
         });
 
         if (!thisOpened) {
-          this.classList.add("productCase_open")
+          this.parentElement.classList.add("productCase_open")
       }
       });
     });
